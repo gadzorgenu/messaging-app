@@ -1,5 +1,5 @@
 import React, { Suspense} from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch ,Redirect} from 'react-router-dom'
 import Pages from './Pages'
 const router = () => {
     return (
@@ -7,6 +7,9 @@ const router = () => {
            <Switch>
                <Route path='/network' component={Pages.Network} />
                <Route path='/messaging' component={Pages.Message}/>
+               <Route path='/login' component={Pages.Login}/>
+               <Route path='/signup' component={Pages.SignUp}/>
+               <Redirect from='*' to='/login' />
            </Switch>
        </Suspense>
     )
