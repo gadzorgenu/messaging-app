@@ -23,7 +23,7 @@ const Login = () => {
         e.preventDefault()
         let users  = JSON.parse(localStorage.getItem('users'))
 
-        let user = users[name]
+        // let user = users[name]
         //generating a random number to serve as user id
         const randomNumb = Math.ceil(Math.random() *10000)
 
